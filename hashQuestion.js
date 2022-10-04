@@ -3,7 +3,7 @@
 //Given an array = [2, 5, 1, 2, 3, 5, 1, 2, 4]
 //it should return 2
 
-const arr = [3, 8, 5, 2, 5, 3, 1, 2, 3, 5, 1, 2, 4];
+const arr = [1, 8, 5, 2, 5, 3, 1, 2, 3, 5, 1, 2, 4];
 function repeatNums(arr){
     let temp = [];
     for(let i = 0; i<arr.length; i++){
@@ -41,7 +41,16 @@ function repeatNums3(arr){
     }
     return undefined;
 }
-
+function repeatNums4(arr){
+    let map = new Map();
+    for(let i=0; i<arr.length; i++){
+        if(map.has(arr[i])){
+            return arr[i];
+        }
+        map.set(arr[i], i);
+    }
+    return 'no recurrent number';
+}
 // console.log(repeatNums(arr));
 // console.log(repeatNums2(arr)); 
-console.log(repeatNums3(arr));
+console.log(repeatNums4(arr));
