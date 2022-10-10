@@ -93,4 +93,4 @@ myLinkedList.append(1);
 myLinkedList.prepend(5);
 myLinkedList.insert(2,99);
 myLinkedList.remove(1);
-console.log(myLinkedList.printList());
+console.log(myLinkedList);
